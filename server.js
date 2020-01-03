@@ -12,11 +12,11 @@ app.use(express.static(path.join(__dirname, "client/public")));
 /* const routes = require("./routes");
 app.use(routes); */
 
-/* const connection = require("./config/connection");
+const connection = require("./config/connection");
 
 connection
   .then(() => console.log("Database connected"))
-  .catch(err => console.log(err)); */
+  .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 3001;
 
