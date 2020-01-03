@@ -9,8 +9,8 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "client/public")));
 
-/* const routes = require("./routes");
-app.use(routes); */
+const routes = require("./routes");
+app.use(routes);
 
 const connection = require("./config/connection");
 
