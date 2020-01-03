@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ZachSelindh/zachselindh.dev#readme",
   "dependencies": {
     "concurrently": "^5.0.2",
+    "dotenv": "^8.2.0",
     "mongoose": "^5.8.4",
     "path": "^0.12.7"
   }

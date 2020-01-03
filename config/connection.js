@@ -6,7 +6,8 @@ var MONGODB_URI =
 var connection = mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 module.exports = connection;
