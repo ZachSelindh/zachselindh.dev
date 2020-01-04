@@ -31,6 +31,22 @@ const projectDataToInsert = [
     ["HTML", "CSS", "Javascript", "Bootstrap", "JQuery"],
     "https://github.com/ZachSelindh/Crystal-Witch-Game",
     "https://zachselindh.github.io/Crystal-Witch-Game/"
+  ],
+  [
+    "Pop Culture Trivia Game",
+    "../../assets/gifs/popculturequiz.gif",
+    "This application uses JQuery and Javascript timers to create a timed quiz, \
+    pulling questions from all sorts of cultural phenomena, from Avengers to \
+    Zoolander. \n \
+    When the game begins, an RNG chooses one of the in-built questions from \
+    a native array, and starts a timer. Whether the user answers correctly \
+    or incorrectly, appropriate reaction GIFs and statements are randomly \
+    selected for the popup window. \n \
+    This app was styled using Bootstrap and a whole lot of nostalgia.",
+    Date.now(),
+    ["HTML", "CSS", "Javascript", "Bootstrap", "JQuery"],
+    "https://github.com/ZachSelindh/Crystal-Witch-Game",
+    "https://zachselindh.github.io/Crystal-Witch-Game/"
   ]
 ];
 

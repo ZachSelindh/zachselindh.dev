@@ -13,12 +13,13 @@ const routes = require("./routes");
 app.use(routes);
 
 const connection = require("./config/connection");
-const dbSeed = require("./config/dbSeed");
+const seedProject = require("./config/dbSeed");
 const projectData = require("./dbData");
 
 connection
   .then(() => console.log("Database connected"))
-  .then(projectData.forEach(data => dbSeed(data)))
+  // Run function seedProject on each item in seed file.
+  .then(projectData.forEach(data => seedProject(data)))
   .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 3001;
