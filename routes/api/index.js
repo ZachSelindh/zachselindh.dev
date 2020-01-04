@@ -8,8 +8,20 @@ router.get("/", (req, res) => {
 
 router.get("/getallprojects", (req, res) => {
   Project.find({})
-    .then(Projects => res.send(Projects))
+    .then(foundProjects => res.send(foundProjects))
     .catch(err => res.json(err));
+});
+
+/* router.get("/react", (req, res) => {
+  Project.find({ technologies: "React" })
+    .then(reactProjects => res.send(reactProjects))
+    .catch(err => res.send(err));
+}); */
+
+router.get("/jquery", (req, res) => {
+  Project.find({ technologies: "JQuery" })
+    .then(jqueryProjects => res.send(jqueryProjects))
+    .catch(err => res.send(err));
 });
 
 module.exports = router;
