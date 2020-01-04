@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const apiRoutes = require("./api/index");
 
-router.use("/api", apiRoutes);
+router.use("/api/", apiRoutes);
 
 // Send React start point if no routes are called.
 router.use(function(req, res) {

@@ -6,7 +6,7 @@
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -24,6 +24,7 @@
     "concurrently": "^5.0.2",
     "dotenv": "^8.2.0",
     "mongoose": "^5.8.4",
+    "nodemon": "^2.0.2",
     "path": "^0.12.7"
   }
 }
