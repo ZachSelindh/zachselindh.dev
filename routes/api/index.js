@@ -14,12 +14,14 @@ router.get("/getallprojects", (req, res) => {
 
 /* router.get("/react", (req, res) => {
   Project.find({ technologies: "React" })
+    .sort({ date_completed: -1 })
     .then(reactProjects => res.send(reactProjects))
     .catch(err => res.send(err));
 }); */
 
 router.get("/jquery", (req, res) => {
   Project.find({ technologies: "JQuery" })
+    .sort({ date_completed: -1 })
     .then(jqueryProjects => res.send(jqueryProjects))
     .catch(err => res.send(err));
 });
