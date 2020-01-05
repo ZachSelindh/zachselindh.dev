@@ -12,7 +12,7 @@ const projectDataToInsert = [
     successfully guess all the words! Extra credit if you don't use the \
     console/developer tools to see the words!",
     Date.now(),
-    ["HTML", "CSS", "Javascript", "Bootstrap"],
+    ["html", "css", "javascript", "bootstrap"],
     "https://github.com/ZachSelindh/Hangman-Game",
     "https://zachselindh.github.io/Hangman-Game/"
   ],
@@ -28,7 +28,7 @@ const projectDataToInsert = [
   constantly counting down. When it reaches zero, the values of \
   the crystals reset, but the current score and target stay the same!",
     Date.now(),
-    ["HTML", "CSS", "Javascript", "Bootstrap", "JQuery"],
+    ["html", "css", "javascript", "bootstrap", "jquery"],
     "https://github.com/ZachSelindh/Crystal-Witch-Game",
     "https://zachselindh.github.io/Crystal-Witch-Game/"
   ],
@@ -44,7 +44,7 @@ const projectDataToInsert = [
     selected for the popup window. \n \
     This app was styled using Bootstrap and a whole lot of nostalgia.",
     Date.now(),
-    ["HTML", "CSS", "Javascript", "Bootstrap", "JQuery"],
+    ["html", "css", "javascript", "bootstrap", "jquery"],
     "https://github.com/ZachSelindh/Crystal-Witch-Game",
     "https://zachselindh.github.io/Crystal-Witch-Game/"
   ]
