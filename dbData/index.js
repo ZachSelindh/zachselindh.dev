@@ -47,7 +47,24 @@ const projectDataToInsert = [
     ["html", "css", "javascript", "bootstrap", "jquery"],
     "https://github.com/ZachSelindh/Crystal-Witch-Game",
     "https://zachselindh.github.io/Crystal-Witch-Game/"
-  ]
+  ],
+  [
+    "Giphy API: A Night At the Movies",
+    "../../assets/gifs/giphy.gif",
+    "One of my first applications using APIs. This app features \
+    a row of buttons which query the Giphy API with their keyword \
+    to return 10 GIFs that match the search criteria. Actually, \
+    they're just still images; mousing over the thumbnails will \
+    turn them into animated GIFs. \
+    \n\
+    Users can also add their own search buttons, \
+    as well as clear the GIFs that have been previously populated.",
+    Date.now(),
+    ["html", "css", "javascript", "bootstrap", "api"],
+    "https://github.com/ZachSelindh/GIPHY-API-project",
+    "https://zachselindh.github.io/GIPHY-API-project/"
+  ],
+  []
 ];
 
 module.exports = projectDataToInsert;
