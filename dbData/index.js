@@ -64,7 +64,21 @@ const projectDataToInsert = [
     "https://github.com/ZachSelindh/GIPHY-API-project",
     "https://zachselindh.github.io/GIPHY-API-project/"
   ],
-  []
+  [
+    "Node Retail Command Line App",
+    "../../assets/gifs/bamazon.gif",
+    "This is a CLI application that uses Node.js to query MySQL to administer \
+stock, price, and availability information for a fake electronics store. \
+On the manager side of the application, additional stock and new items can \
+be added using the same command line interface. \
+\n\
+As a CLI, it's not deployed, so my deployment links refer to a youtube\
+ video showing the functionality.",
+    Date.now(),
+    ["javascript", "nodejs", "mysql"],
+    "https://github.com/ZachSelindh/BAmazon",
+    "https://www.youtube.com/watch?v=-A4jBu9tmHI"
+  ]
 ];
 
 module.exports = projectDataToInsert;
