@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "oswald";
+  src: url("../../assets/fonts/Oswald-Light.ttf");
+}
+
+* {
+  font-family: "oswald" !important;
+  box-sizing: border-box;
+}
+
 body {
   background: url("./../../assets//background/coffeeshop.jpg") no-repeat center
     center fixed;
@@ -5,7 +15,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* font-family: "Indie Flower", cursive; */
 }
 
 .wrapper {

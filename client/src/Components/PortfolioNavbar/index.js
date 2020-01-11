@@ -1,50 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from "reactstrap";
 
-const PortfolioNavbar = props => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+function PortfolioNavbar() {
   return (
-    <div>
-      <Navbar className="navbar-z" color="light" light expand="md">
-        <NavbarBrand className="navbarbrand-z" href="/">
-          Zach Selindh
-        </NavbarBrand>
-        <NavbarText>Full Stack Developer</NavbarText>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink color="dark" href="/about">
-                About
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink target="#" href="https://github.com/ZachSelindh">
-                GitHub
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <nav className="navbar navbar-light bg-light navbarz">
+      <div className="container">
+        <div className="col-sm-12 col-lg-6 col-xl-8">
+          <a id="navbar-title" href="/">
+            Zach Selindh
+          </a>
+          <p id="navbrand-subtext">Full Stack Web Developer</p>
+        </div>
+        <div className="col-sm-12 col-lg-6 col-xl-4">
+          <div className="row" id="nav-icon-row-z">
+            {/* <a
+              className="nav-item nav-icon-z"
+              href="https://github.com/ZachSelindh"
+              target="#"
+              title="GitHub Profile"
+            >
+              {  <div className="nav-item nav-link">
+                <img
+                  alt="Github"
+                  src="./images/github-logo.svg"
+                  height="60px"
+                  width="60px"
+                />
+              </div>}
+              <p>GitHub</p>
+            </a> */}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-};
+}
 
 export default PortfolioNavbar;
