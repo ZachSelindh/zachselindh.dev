@@ -3,34 +3,39 @@ import "./style.css";
 
 function PortfolioNavbar() {
   return (
-    <nav className="navbar navbar-light bg-light navbarz">
-      <div className="container">
-        <div className="col-sm-12 col-lg-6 col-xl-8">
-          <a id="navbar-title" href="/">
-            Zach Selindh
-          </a>
-          <p id="navbrand-subtext">Full Stack Web Developer</p>
-        </div>
-        <div className="col-sm-12 col-lg-6 col-xl-4">
-          <div className="row" id="nav-icon-row-z">
-            {/* <a
-              className="nav-item nav-icon-z"
-              href="https://github.com/ZachSelindh"
-              target="#"
-              title="GitHub Profile"
-            >
-              {  <div className="nav-item nav-link">
-                <img
-                  alt="Github"
-                  src="./images/github-logo.svg"
-                  height="60px"
-                  width="60px"
-                />
-              </div>}
-              <p>GitHub</p>
-            </a> */}
-          </div>
-        </div>
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <a className="navbar-brand" href="/">
+        Zach Selindh <span id="nav-span-z"> - Full Stack Developer</span>
+      </a>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="/">
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/">
+              Features
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/">
+              Pricing
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
