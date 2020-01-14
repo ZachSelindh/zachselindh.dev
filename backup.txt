@@ -1,0 +1,60 @@
+  <a
+              className="nav-item nav-icon-z"
+              href="https://github.com/ZachSelindh"
+              target="#"
+              title="GitHub Profile"
+            >
+              <div className="nav-item nav-link">
+                <img
+                  alt="Github"
+                  src="./images/github-logo.svg"
+                  height="60px"
+                  width="60px"
+                />
+              </div>
+              <p>GitHub</p>
+            </a>
+
+            <a className="nav-item nav-icon-z" href="/about" title="About">
+              <div className="nav-item nav-link">
+                <img
+                  alt="About"
+                  src="https://cdn3.iconfinder.com/data/icons/web-and-internet-icons/512/Information-512.png"
+                  height="60px"
+                  width="60px"
+                />
+              </div>
+              <p>About</p>
+            </a>
+
+            <a
+              className="nav-item nav-icon-z"
+              href="/portfolio"
+              title="Portfolio"
+            >
+              <div className="nav-item nav-link">
+                <img
+                  alt="Portfolio"
+                  src="https://cdn3.iconfinder.com/data/icons/business-511/100/business_10-512.png"
+                  height="60px"
+                  width="60px"
+                />
+              </div>
+              <p>Portfolio</p>
+            </a>
+
+            <a
+              className="nav-item nav-icon-z"
+              href="/contact"
+              title="Contact Page"
+            >
+              <div className="nav-item nav-link">
+                <img
+                  alt="Contact"
+                  src="https://cdn3.iconfinder.com/data/icons/email-51/48/25-512.png"
+                  height="60px"
+                  width="60px"
+                />
+              </div>
+              <p>Contact</p>
+            </a>

@@ -3,7 +3,10 @@ import "./style.css";
 
 function PortfolioNavbar() {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
+    <nav
+      id="navbar-z"
+      className="navbar navbar-expand-md navbar-light bg-light"
+    >
       <a className="navbar-brand" href="/">
         Zach Selindh <span id="nav-span-z"> - Full Stack Developer</span>
       </a>
@@ -20,7 +23,7 @@ function PortfolioNavbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
-          <li className="nav-item active">
+          <li className="nav-item">
             <a className="nav-link" href="/">
               Home
             </a>
