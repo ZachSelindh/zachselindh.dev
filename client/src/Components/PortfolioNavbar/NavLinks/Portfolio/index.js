@@ -3,6 +3,7 @@ import React from "react";
 function PortfolioLink() {
   return (
     <a
+      id="portfolio-icon-z"
       className="nav-icon-z nav-item nav-link"
       href="/portfolio"
       title="Portfolio"

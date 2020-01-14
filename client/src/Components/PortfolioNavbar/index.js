@@ -24,8 +24,9 @@ function PortfolioNavbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
           <GithubLink />
+          <PortfolioLink />
           <PortfolioLink />
         </ul>
       </div>

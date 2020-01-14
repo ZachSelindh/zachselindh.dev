@@ -10,9 +10,18 @@
   font-size: 0.75em;
 }
 
+.nav-item {
+  display: inline-block !important;
+}
+
 .nav-item p {
+  font-size: 1.5em;
   color: black !important;
   position: relative;
+}
+
+#portfolio-icon-z img {
+  margin-left: 8px;
 }
 
 .nav-item:hover {
@@ -20,11 +29,11 @@
 }
 
 @media (max-width: 767.98px) {
-  .nav-item p {
-    margin-left: 1.5%;
-  }
   #navbrand-z span {
     display: none;
+  }
+  .nav-item {
+    margin: auto 1em auto 1em;
   }
 }
 
@@ -32,6 +41,7 @@
   #navbar-z {
     padding-left: 3em;
     padding-right: 3em;
+    padding-bottom: 0em;
   }
   .nav-item:hover {
     transform: scale(1.1);
