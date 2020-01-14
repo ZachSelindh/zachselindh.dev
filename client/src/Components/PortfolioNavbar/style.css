@@ -2,6 +2,42 @@
   border-bottom: 0.2em solid black;
 }
 
+#navbrand-z {
+  font-size: 3em;
+}
+
 #nav-span-z {
   font-size: 0.75em;
+}
+
+.nav-item p {
+  color: black !important;
+  position: relative;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .nav-item p {
+    margin-left: 1.5%;
+  }
+  #navbrand-z span {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #navbar-z {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .nav-item:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
+  .nav-item p {
+    text-align: center;
+  }
 }

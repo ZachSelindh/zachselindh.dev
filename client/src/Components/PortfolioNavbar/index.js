@@ -1,4 +1,6 @@
 import React from "react";
+import GithubLink from "./NavLinks/Github";
+import PortfolioLink from "./NavLinks/Portfolio";
 import "./style.css";
 
 function PortfolioNavbar() {
@@ -7,7 +9,7 @@ function PortfolioNavbar() {
       id="navbar-z"
       className="navbar navbar-expand-md navbar-light bg-light"
     >
-      <a className="navbar-brand" href="/">
+      <a id="navbrand-z" className="navbar-brand" href="/">
         Zach Selindh <span id="nav-span-z"> - Full Stack Developer</span>
       </a>
       <button
@@ -22,22 +24,9 @@ function PortfolioNavbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Features
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Pricing
-            </a>
-          </li>
+        <ul className="navbar-nav ml-auto">
+          <GithubLink />
+          <PortfolioLink />
         </ul>
       </div>
     </nav>
