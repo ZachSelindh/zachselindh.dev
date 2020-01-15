@@ -10,7 +10,7 @@ function ContactLink() {
     >
       <img
         alt=""
-        src="https://image.flaticon.com/icons/svg/25/25231.svg"
+        src="https://cdn3.iconfinder.com/data/icons/web-and-internet-icons/512/Information-512.png"
         height="60px"
         width="60px"
       />
