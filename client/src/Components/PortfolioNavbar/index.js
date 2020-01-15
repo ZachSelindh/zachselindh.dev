@@ -1,6 +1,7 @@
 import React from "react";
 import GithubLink from "./NavLinks/Github";
 import PortfolioLink from "./NavLinks/Portfolio";
+import ContactLink from "./NavLinks/Contact";
 import "./style.css";
 
 function PortfolioNavbar() {
@@ -27,7 +28,7 @@ function PortfolioNavbar() {
         <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
           <GithubLink />
           <PortfolioLink />
-          <PortfolioLink />
+          <ContactLink />
         </ul>
       </div>
     </nav>

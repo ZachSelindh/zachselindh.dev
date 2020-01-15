@@ -1,12 +1,12 @@
 import React from "react";
 
-function GithubLink() {
+function ContactLink() {
   return (
     <a
       className="nav-icon-z nav-item nav-link"
-      href="https://github.com/ZachSelindh"
+      href="/contact"
       target="#"
-      title="GitHub Profile"
+      title="Contact Page"
     >
       <img
         alt=""
@@ -14,9 +14,9 @@ function GithubLink() {
         height="60px"
         width="60px"
       />
-      <p>GitHub</p>
+      <p>Contact</p>
     </a>
   );
 }
 
-export default GithubLink;
+export default ContactLink;
