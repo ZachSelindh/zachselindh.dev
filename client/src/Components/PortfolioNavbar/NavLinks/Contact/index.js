@@ -3,6 +3,7 @@ import React from "react";
 function ContactLink() {
   return (
     <a
+      id="contact-icon-z"
       className="nav-icon-z nav-item nav-link"
       href="/contact"
       target="#"
