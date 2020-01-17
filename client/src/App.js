@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar></Navbar>
+        <Navbar />
         <Router>
           <Route exact path="/" Component={Home}></Route>
           <Route exact path="/about" Component={About}></Route>
