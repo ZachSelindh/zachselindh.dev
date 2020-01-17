@@ -3,9 +3,9 @@ import React from "react";
 function PortfolioLink() {
   return (
     <a
+      href="/portfolio"
       id="portfolio-icon-z"
       className="nav-icon-z nav-item nav-link"
-      href="/portfolio"
       title="Portfolio"
     >
       <img
