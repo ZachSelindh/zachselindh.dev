@@ -1,8 +1,14 @@
 import React from "react";
+import GitHubImg from "../../../assets/icons/nav/github-logo.svg";
+import WebImg from "../../../assets/icons/web-icon.png";
 
 function RightPortfolioItem(props) {
   return (
     <div id={props.index} className="row portfolio-item">
+      <div className="col-md-12 col-lg-6">
+        <h1 className="portfolio-title">{props.title}</h1>
+        <p className="portfolio-body">{props.description}</p>
+      </div>
       <div className="col-md-12 col-lg-6">
         <a href={props.deployed_link} target="#">
           <img
@@ -14,8 +20,19 @@ function RightPortfolioItem(props) {
           />
         </a>
       </div>
-      <h1>{props.title}</h1>
-      <p>Right</p>
+      <div className="col-md-12 col-lg-6 link-row">
+        <span className="tech-title"> Links: </span>
+        <a
+          href="https://github.com/ZachSelindh/react-todo-mern"
+          title="GitHub Repo"
+          target="#"
+        >
+          <img alt="" className="tech-icon tech-link" src={GitHubImg} />
+        </a>
+        <a href={props.deployed_link} title="Deployed App" target="#">
+          <img alt="" className="tech-icon tech-link" src={WebImg} />
+        </a>
+      </div>
     </div>
   );
 }
@@ -41,15 +58,6 @@ function RightPortfolioItem(props) {
                     <img class="tech-icon" title="JSON Web Tokens" src="./images/jwt-logo.png">
                     <img class="tech-icon" title="Heroku" src="./images/heroku.png">
                 </div>
-                <div class="col-md-12 col-lg-6 link-row">
-                    <span class="tech-title"> Links: </span>
-                    <a href="https://github.com/ZachSelindh/react-todo-mern" title="GitHub Repo" target="_blank">
-                        <img class="tech-icon tech-link" src="./images/github-logo.svg">
-                    </a>
-                    <a href="https://mern-stack-todo-app-zach.herokuapp.com/" title="Deployed App" target="_blank">
-                        <img class="tech-icon tech-link" src="./images/web-icon.png">
-                    </a>
-                </div>
-            </div>  */
+                  */
 
 export default RightPortfolioItem;

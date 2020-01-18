@@ -27,9 +27,9 @@ function PortfolioNavbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
+          <PortfolioLink />
           <GithubLink />
           <AboutLink />
-          <PortfolioLink />
           <ContactLink />
         </ul>
       </div>

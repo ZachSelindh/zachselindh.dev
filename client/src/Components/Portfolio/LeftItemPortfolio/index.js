@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../../assets/gifs/wildwesthangman.gif";
 
 function LeftItemPortfolio(props) {
   return (

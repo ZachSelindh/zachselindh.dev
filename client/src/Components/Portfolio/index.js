@@ -15,31 +15,28 @@ function Portfolio() {
   }, []);
 
   return (
-    <div className="col-lg-10 col-sm-12 portfolio-z bg-light">
-      <h1>Portfolio</h1>
+    <div className="col-12 portfolio-z bg-light">
+      <h1 id="portfolio-brand-z">Portfolio</h1>
       {isLoading ? (
         <div>Loading...</div>
       ) : (
         portfolioItems.map((item, index) => {
+          const customProps = {
+            key: item._id,
+            index: index,
+            title: item.title,
+            description: item.description,
+            deployed_link: item.deployed_link,
+            gif_location: item.gif_location
+          };
           return index % 2 === 0 ? (
-            <LeftItemPortfolio
-              id={item._id}
-              index={index}
-              title={item.title}
-              deployed_link={item.deployed_link}
-              gif_location={item.gif_location}
-            />
+            <LeftItemPortfolio {...customProps} />
           ) : (
-            <RightItemPortfolio
-              id={item._id}
-              index={index}
-              title={item.title}
-              deployed_link={item.deployed_link}
-              gif_location={item.gif_location}
-            />
+            <RightItemPortfolio {...customProps} />
           );
         })
       )}
+      <p id="portfolio-footer">Check back later for more apps!</p>
     </div>
   );
 }

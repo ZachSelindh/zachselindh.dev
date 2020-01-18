@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/portfolio">
+            <Route exact path="/portfolio">
               <Portfolio />
             </Route>
           </div>
