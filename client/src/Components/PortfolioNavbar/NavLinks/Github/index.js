@@ -1,4 +1,5 @@
 import React from "react";
+import GitHubImg from "../../../../assets/icons/nav/github-logo.svg";
 
 function GithubLink() {
   return (
@@ -8,12 +9,7 @@ function GithubLink() {
       target="#"
       title="GitHub Profile"
     >
-      <img
-        alt=""
-        src="https://image.flaticon.com/icons/svg/25/25231.svg"
-        height="60px"
-        width="60px"
-      />
+      <img alt="" height="60px" width="60px" src={GitHubImg} />
       <p>GitHub</p>
     </a>
   );
