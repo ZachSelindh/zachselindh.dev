@@ -7,14 +7,12 @@ import LeftItemPortfolio from "./LeftItemPortfolio";
 function Portfolio() {
   const [portfolioItems, setPortfolioItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(
-    () => {
-      API.getAllPortfolio()
-        .then(response => setPortfolioItems(response.data), setIsLoading(false))
-        .catch(err => console.log(err));
-    },
-    [] //Empty Array to solve dependency issue
-  );
+  useEffect(() => {
+    API.getAllPortfolio()
+      .then(response => setPortfolioItems(response.data))
+      .then(setIsLoading(false))
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <div className="col-lg-10 col-sm-12 portfolio-z bg-light">
@@ -23,7 +21,16 @@ function Portfolio() {
         <div>Loading...</div>
       ) : (
         portfolioItems.map((item, index) => {
-          return index % 2 === 0 ? (
+          return (
+            <LeftItemPortfolio
+              key={item._id}
+              index={index}
+              title={item.title}
+              deployed_link={item.deployed_link}
+              gif_location={require`${item.gif_location}`}
+            />
+          );
+          /* return index % 2 === 0 ? (
             <LeftItemPortfolio
               id={item._id}
               index={index}
@@ -39,7 +46,7 @@ function Portfolio() {
               deployed_link={item.deployed_link}
               gif_location={item.gif_location}
             />
-          );
+          ); */
         })
       )}
     </div>
