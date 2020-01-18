@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./style.css";
+import RightItemPortfolio from "./RightItemPortfolio";
+import LeftItemPortfolio from "./LeftItemPortfolio";
 
 function Portfolio() {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -16,7 +18,11 @@ function Portfolio() {
       <h1>Portfolio</h1>
 
       {portfolioItems.map((item, index) => {
-        return <div id={index}>{item.title}</div>;
+        return index % 2 === 0 ? (
+          <LeftItemPortfolio id={index} title={item.title} />
+        ) : (
+          <RightItemPortfolio id={index} title={item.title} />
+        );
       })}
     </div>
   );
