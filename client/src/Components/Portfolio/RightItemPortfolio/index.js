@@ -2,7 +2,7 @@ import React from "react";
 
 function RightPortfolioItem(props) {
   return (
-    <div id={props.id} key={props.key} className="row portfolio-item">
+    <div id={props.index} className="row portfolio-item">
       <div className="col-md-12 col-lg-6">
         <a href={props.deployed_link} target="#">
           <img

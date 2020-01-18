@@ -20,7 +20,24 @@ const seedProject = projectData => {
             throw err;
           });
       } else if (foundProj) {
-        console.log(`${projectData[0]}` + " already exists.");
+        Project.updateOne(
+          { title: projectData[0] },
+          {
+            title: projectData[0],
+            gif_location: projectData[1],
+            description: projectData[2],
+            completed_date: projectData[3],
+            technologies: projectData[4],
+            github_link: projectData[5],
+            deployed_link: projectData[6]
+          },
+          (err, raw) => {
+            if (err) {
+              res.send(err);
+            }
+            console.log(`${projectData[0]} was updated.`);
+          }
+        );
       }
     })
     .catch(err => console.log(err));

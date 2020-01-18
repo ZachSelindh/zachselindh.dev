@@ -21,16 +21,7 @@ function Portfolio() {
         <div>Loading...</div>
       ) : (
         portfolioItems.map((item, index) => {
-          return (
-            <LeftItemPortfolio
-              key={item._id}
-              index={index}
-              title={item.title}
-              deployed_link={item.deployed_link}
-              gif_location={require`${item.gif_location}`}
-            />
-          );
-          /* return index % 2 === 0 ? (
+          return index % 2 === 0 ? (
             <LeftItemPortfolio
               id={item._id}
               index={index}
@@ -46,7 +37,7 @@ function Portfolio() {
               deployed_link={item.deployed_link}
               gif_location={item.gif_location}
             />
-          ); */
+          );
         })
       )}
     </div>

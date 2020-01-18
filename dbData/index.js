@@ -3,7 +3,7 @@ const projectDataToInsert = [
   // technologies, github_link, deployed_link,
   [
     "Wild West Hangman",
-    "../../../assets/gifs/wildwesthangman.gif",
+    "https://media.giphy.com/media/khkTyxl3MOGwczgoJt/giphy.gif",
     "My first functional web application! This app uses vanilla Javascript \
     and the Bootstrap HTML/CSS library for styling, albeit at the level of a \
     true beginner! A basic hangman game, Wild West Hangman uses a native array \
@@ -18,7 +18,7 @@ const projectDataToInsert = [
   ],
   [
     "Crystal Witch Game",
-    "../../../assets/gifs/crystalwitch.gif",
+    "https://media.giphy.com/media/XIFgMl6nMtOiKe3F7J/giphy.gif",
     "One of my early apps. This game uses Jquery and timers to create a \
   guessing/memory game in which the player must correctly learn the \
   values of the displayed crystals and use on-the-fly arithmetic to \
@@ -34,7 +34,7 @@ const projectDataToInsert = [
   ],
   [
     "Pop Culture Trivia Game",
-    "../../../assets/gifs/popculturequiz.gif",
+    "https://media.giphy.com/media/3s6KDjzmlTQH1iNpoQ/giphy.gif",
     "This application uses JQuery and Javascript timers to create a timed quiz, \
     pulling questions from all sorts of cultural phenomena, from Avengers to \
     Zoolander. \n \
@@ -50,7 +50,7 @@ const projectDataToInsert = [
   ],
   [
     "Giphy API: A Night At the Movies",
-    "../../../assets/gifs/giphy.gif",
+    "https://media.giphy.com/media/B1E2oPGVhWbx6MPkNh/giphy.gif",
     "One of my first applications using APIs. This app features \
     a row of buttons which query the Giphy API with their keyword \
     to return 10 GIFs that match the search criteria. Actually, \
@@ -66,7 +66,7 @@ const projectDataToInsert = [
   ],
   [
     "Node Retail Command Line App",
-    "../../../assets/gifs/bamazon.gif",
+    "https://media.giphy.com/media/dBadldsatjh2W3nmLN/giphy.gif",
     "This is a CLI application that uses Node.js to query MySQL to administer \
 stock, price, and availability information for a fake electronics store. \
 On the manager side of the application, additional stock and new items can \
