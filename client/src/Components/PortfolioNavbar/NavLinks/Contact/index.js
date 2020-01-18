@@ -10,7 +10,7 @@ function ContactLink() {
     >
       <img
         alt=""
-        src="https://cdn3.iconfinder.com/data/icons/web-and-internet-icons/512/Information-512.png"
+        src="https://cdn3.iconfinder.com/data/icons/email-51/48/25-512.png"
         height="60px"
         width="60px"
       />

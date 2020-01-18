@@ -32,15 +32,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 767.98px) {
-  #navbrand-z span {
-    display: none;
-  }
-  .nav-item {
-    margin: auto 1em auto 1em;
-  }
-}
-
 @media (min-width: 768px) {
   #navbar-z {
     padding-left: 3em;
@@ -53,5 +44,20 @@
   }
   .nav-item p {
     text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #navbrand-z span {
+    display: none;
+  }
+  .nav-item {
+    margin: auto 1em auto 1em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .nav-item {
+    margin: auto 0.2em auto 0.2em;
   }
 }
