@@ -1,4 +1,5 @@
 import React from "react";
+import ContactImg from "../../../../assets/icons/nav/mail.png";
 
 function ContactLink() {
   return (
@@ -8,12 +9,7 @@ function ContactLink() {
       href="/contact"
       title="Contact Page"
     >
-      <img
-        alt=""
-        src="https://cdn3.iconfinder.com/data/icons/email-51/48/25-512.png"
-        height="60px"
-        width="60px"
-      />
+      <img alt="" src={ContactImg} height="60px" width="60px" />
       <p>Contact</p>
     </a>
   );

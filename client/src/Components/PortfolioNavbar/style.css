@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 869px) {
   #navbrand-z span {
     display: none;
   }
@@ -58,6 +58,12 @@
 
 @media (max-width: 575.98px) {
   .nav-item {
+    margin: auto 0.7em auto 0.75em;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 370px) {
+  .nav-icon-z {
     margin: auto 0.2em auto 0.2em;
   }
 }

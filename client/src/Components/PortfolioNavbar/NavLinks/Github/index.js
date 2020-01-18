@@ -9,7 +9,7 @@ function GithubLink() {
       target="#"
       title="GitHub Profile"
     >
-      <img alt="" height="60px" width="60px" src={GitHubImg} />
+      <img alt="" src={GitHubImg} height="60px" width="60px" />
       <p>GitHub</p>
     </a>
   );

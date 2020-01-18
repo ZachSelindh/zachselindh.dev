@@ -1,4 +1,5 @@
 import React from "react";
+import PortfolioImg from "../../../../assets/icons/nav/briefcase.png";
 
 function PortfolioLink() {
   return (
@@ -8,12 +9,7 @@ function PortfolioLink() {
       className="nav-icon-z nav-item nav-link"
       title="Portfolio"
     >
-      <img
-        alt=""
-        src="https://cdn3.iconfinder.com/data/icons/business-511/100/business_10-512.png"
-        height="60px"
-        width="60px"
-      />
+      <img alt="" src={PortfolioImg} height="60px" width="60px" />
       <p>Portfolio</p>
     </a>
   );
