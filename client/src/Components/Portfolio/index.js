@@ -25,9 +25,12 @@ function Portfolio() {
             key: item._id,
             index: index,
             title: item.title,
+            gif_location: item.gif_location,
             description: item.description,
-            deployed_link: item.deployed_link,
-            gif_location: item.gif_location
+            completed_date: item.completed_date,
+            technologies: item.technologies,
+            github_link: item.github_link,
+            deployed_link: item.deployed_link
           };
           return index % 2 === 0 ? (
             <LeftItemPortfolio {...customProps} />
