@@ -11,8 +11,8 @@ function RightPortfolioItem(props) {
       <div className="portfolio-img-div col-md-12 d-none d-md-block d-lg-none">
         <a href={props.deployed_link} target="#">
           <img
-            alt=""
             className="portfolio-button"
+            alt=""
             src={props.gif_location}
             width="450px"
             height="250px"
@@ -39,11 +39,21 @@ function RightPortfolioItem(props) {
       </div>
       <div className="col-md-12 col-lg-6 link-row">
         <span className="tech-title"> Links: </span>
-        <a href={props.github_link} title="GitHub Repo" target="#">
-          <img alt="" className="tech-icon tech-link" src={GitHubImg} />
+        <a
+          className="deploy-link"
+          href={props.github_link}
+          title="GitHub Repo"
+          target="#"
+        >
+          <img alt="" className="tech-icon" src={GitHubImg} />
         </a>
-        <a href={props.deployed_link} title="Deployed App" target="#">
-          <img alt="" className="tech-icon tech-link" src={WebImg} />
+        <a
+          className="deploy-link"
+          href={props.deployed_link}
+          title="Deployed App"
+          target="#"
+        >
+          <img alt="" className="tech-icon" src={WebImg} />
         </a>
       </div>
       <div className="col-md-12 col-lg-6 link-row">

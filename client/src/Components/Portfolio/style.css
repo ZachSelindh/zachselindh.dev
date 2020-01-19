@@ -12,11 +12,20 @@
   padding: 1em;
 }
 
-.portfolio-item a :hover {
+.portfolio-img-div a :hover {
   cursor: pointer;
   transform: scale(1.02);
   transition-duration: 0.5s;
   box-shadow: 3px 3px 3px grey;
+}
+
+.deploy-link {
+  padding: 0.2em;
+}
+
+.deploy-link :hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 .portfolio-title {
