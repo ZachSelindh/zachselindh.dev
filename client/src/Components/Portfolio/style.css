@@ -52,9 +52,18 @@ img.portfolio-button {
 
 .link-row {
   text-align: center;
+  padding-top: 0.5em;
 }
 
 .portfolio-item p {
+  font-size: 1.2em;
+}
+
+.portfolio-item p {
+  font-size: 1.2em;
+}
+
+.tech-title {
   font-size: 1.2em;
 }
 
