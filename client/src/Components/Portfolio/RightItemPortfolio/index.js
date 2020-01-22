@@ -8,7 +8,7 @@ function RightPortfolioItem(props) {
       <div className="row col-12">
         <h1 className="portfolio-title">{props.title}</h1>
       </div>
-      <div className="portfolio-img-div col-md-12 d-none d-md-block d-lg-none">
+      <div className="portfolio-img-div col-md-12 d-xs-block d-sm-block d-md-block d-lg-none">
         <a href={props.deployed_link} target="#">
           <img
             className="portfolio-button"
@@ -24,7 +24,7 @@ function RightPortfolioItem(props) {
       <div className="col-md-12 col-lg-6">
         <p className="portfolio-body">{props.description}</p>
       </div>
-      <div className="portfolio-img-div col-lg-6 d-md-none d-lg-block">
+      <div className="portfolio-img-div col-lg-6 d-none d-lg-block">
         <a href={props.deployed_link} target="#">
           <img
             alt=""
