@@ -4,4 +4,9 @@
   border: 2px solid black;
   border-radius: 0.5em;
   overflow: hidden;
+  font-size: 1.2em;
+}
+
+.bodyLink {
+  color: black !important;
 }
