@@ -2,7 +2,7 @@ import React from "react";
 import GithubLink from "./NavLinks/Github";
 import AboutLink from "./NavLinks/About";
 import PortfolioLink from "./NavLinks/Portfolio";
-import ContactLink from "./NavLinks/Contact";
+import ResumeLink from "./NavLinks/Resume";
 import "./style.css";
 
 function PortfolioNavbar() {
@@ -30,7 +30,7 @@ function PortfolioNavbar() {
           <PortfolioLink />
           <GithubLink />
           <AboutLink />
-          <ContactLink />
+          <ResumeLink />
         </ul>
       </div>
     </nav>
