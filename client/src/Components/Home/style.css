@@ -1,0 +1,11 @@
+.home-z {
+  margin: auto;
+  margin-top: 1em;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.home-z p {
+  font-size: 1.2em;
+}
