@@ -1,7 +1,12 @@
 import axios from "axios";
 
-export default {
+const API = {
   getAllPortfolio: () => {
     return axios.get("/api/allprojects");
+  },
+  getByTech: technology => {
+    return axios.get("/api/tech/" + technology);
   }
 };
+
+export default API;

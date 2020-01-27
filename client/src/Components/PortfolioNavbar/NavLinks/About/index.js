@@ -4,7 +4,7 @@ import AboutImg from "../../../../assets/icons/nav/info.png";
 function AboutLink() {
   return (
     <a
-      id="About-icon-z"
+      id="about-icon-z"
       className="nav-icon-z nav-item nav-link"
       href="/About"
       title="About Page"

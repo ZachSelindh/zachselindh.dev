@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import "./style.css";
 import RightItemPortfolio from "./RightItemPortfolio";
 import LeftItemPortfolio from "./LeftItemPortfolio";
+import "./style.css";
 
 function Portfolio() {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -18,7 +18,7 @@ function Portfolio() {
     <div className="col-12 portfolio-z bg-light">
       <h1 id="portfolio-brand-z">Portfolio</h1>
       {isLoading ? (
-        <div>Loading...</div>
+        <div>Loading Portfolio Items...</div>
       ) : (
         portfolioItems.map((item, index) => {
           const customProps = {
