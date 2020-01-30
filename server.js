@@ -14,7 +14,7 @@ app.use(routes);
 
 const connection = require("./config/connection");
 const seedProject = require("./config/dbSeed");
-const projectData = require("./dbData");
+const projectData = JSON.parse(require("./dbData/index.json"));
 
 connection
   .then(() => console.log("Database connected"))
