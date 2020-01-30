@@ -1,0 +1,20 @@
+{
+  "hangman": {
+    "title": "Wild West Hangman",
+    "gifLocation": "https://media.giphy.com/media/khkTyxl3MOGwczgoJt/giphy.gif",
+    "description": "My first functional web application! This app uses vanilla Javascript and the Bootstrap HTML/CSS library for styling, albeit at the level of a true beginner! A basic hangman game, Wild West Hangman uses a native array of possible words to populate the scoreboard. Once a word is chosen, it is kicked out of the array, so it is possible to win the game is you successfully guess all the words! Extra credit if you don't use the console/developer tools to see the words!",
+    "date_completed": "21 June 1990",
+    "technologies": ["html", "css", "javascript", "bootstrap"],
+    "github_link": "https://github.com/ZachSelindh/Hangman-Game",
+    "deployed_link": "https://zachselindh.github.io/Hangman-Game/"
+  },
+  "witch": {
+    "title": "Crystal Witch Game",
+    "gifLocation": "https://media.giphy.com/media/XIFgMl6nMtOiKe3F7J/giphy.gif",
+    "description": "One of my early apps. This game uses Jquery and timers to create a guessing/memory game in which the player must correctly learn the values of the displayed crystals and use on-the-fly arithmetic to get to the randomly generated target number. My app has a twist: In 'Hardcore Mode,' a ten-second timer is constantly counting down. When it reaches zero, the values of the crystals reset, but the current score and target stay the same!",
+    "date_completed": "21 June 1990",
+    "technologies": ["html", "css", "javascript", "bootstrap", "jquery"],
+    "github_link": "https://github.com/ZachSelindh/Crystal-Witch-Game",
+    "deployed_link": "https://zachselindh.github.io/Crystal-Witch-Game/"
+  }
+}
