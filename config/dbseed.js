@@ -44,7 +44,7 @@ const seedProject = projectData => {
             if (err) {
               res.send(err);
             }
-            console.log(`${projectData[0]} was updated.`);
+            console.log(`${title} was updated.`);
           }
         );
       }
