@@ -26,6 +26,15 @@
       "technologies": ["html", "css", "javascript", "bootstrap", "jquery"],
       "github_link": "https://github.com/ZachSelindh/Pop-Culture-Trivia",
       "deployed_link": "https://zachselindh.github.io/Pop-Culture-Trivia/"
+    },
+    {
+      "title": "Giphy API: A Night At the Movies",
+      "gif_location": "https://media.giphy.com/media/B1E2oPGVhWbx6MPkNh/giphy.gif",
+      "description": "One of my first applications using APIs. This app features a row of buttons which query the Giphy API with their keyword to return 10 GIFs that match the search criteria. Actually, they're just still images; mousing over the thumbnails will turn them into animated GIFs. Users can also add their own search buttons, as well as clear the GIFs that have been previously populated.",
+      "completed_date": "21 June 1990",
+      "technologies": ["html", "css", "javascript", "bootstrap", "api"],
+      "github_link": "https://github.com/ZachSelindh/GIPHY-API-project",
+      "deployed_link": "https://zachselindh.github.io/GIPHY-API-project/"
     }
   ]
 }
