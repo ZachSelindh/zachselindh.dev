@@ -44,6 +44,31 @@
       "technologies": ["javascript", "nodejs", "mysql"],
       "github_link": "https://github.com/ZachSelindh/BAmazon",
       "deployed_link": "https://www.youtube.com/watch?v=-A4jBu9tmHI"
+    },
+    {
+      "title": "D&D & Dates",
+      "gif_location": "https://media0.giphy.com/media/3HBCWrt9G5AlFZnuR4/giphy.gif",
+      "description": "Everyone has that one fantasy about that cute elven rogue, right? No? Just me? This app uses Express and Node.js to set up a survey that matches the user to whichever character in the native API has the closest survey score.",
+      "completed_date": "21 June 1990",
+      "technologies": ["javascript", "jquery", "bootstrap", "nodejs", "heroku"],
+      "github_link": "https://github.com/ZachSelindh/DungeonsAndDragonsAndDates",
+      "deployed_link": "https://dungeons-and-dragons-and-dates.herokuapp.com/"
+    },
+    {
+      "title": "Burgers I'd Like Yo Eat",
+      "gif_location": "https://media0.giphy.com/media/9qZDUmhxET0MGRVjkm/giphy.gif",
+      "description": "Who doesn't like a good cheeseburger? This app uses a MySQL database to store what burgers I'd like to eat, and allows me to change info on the database when I've eaten the burger. Please don't add any expletive-laced burger names. I definitely won't find it hilarious and laugh out loud when I see it. Promise.",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "javascript",
+        "jquery",
+        "boostrap",
+        "nodejs",
+        "mysql",
+        "heroku"
+      ],
+      "github_link": "https://github.com/ZachSelindh/Burgers-Id-Like-To-Eat",
+      "deployed_link": "https://burgers-id-like-to-eat.herokuapp.com/"
     }
   ]
 }
