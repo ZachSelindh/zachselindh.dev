@@ -69,6 +69,100 @@
       ],
       "github_link": "https://github.com/ZachSelindh/Burgers-Id-Like-To-Eat",
       "deployed_link": "https://burgers-id-like-to-eat.herokuapp.com/"
+    },
+    {
+      "title": "News Scraper",
+      "gif_location": "https://media1.giphy.com/media/258quBLClB7ostg0GY/giphy.gif",
+      "description": "This web app uses the Cheerio web scraper to make calls to various news websites and returns data this styled and rendered in a format that allows users to view the article headline, the subtext, and view links to the original articles. The article information is stored using Mongoose and rendered using the Express-Handlebars templating engine. The app also uses local storage to create a favorites list.",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "javascript",
+        "jquery",
+        "boostrap",
+        "nodejs",
+        "monodb",
+        "heroku"
+      ],
+      "github_link": "https://github.com/ZachSelindh/News-Scraper",
+      "deployed_link": "https://news-scraperer.herokuapp.com/"
+    },
+    {
+      "title": "React Avengers Clicky Game",
+      "gif_location": "https://media2.giphy.com/media/iNZaWRBTtAWkcANc72/giphy.gif",
+      "description": "My first React.js application! This app uses React to render a web page with cards featuring the visages of famous superheroes. Every time the user clicks an Avenger, the cards are shuffled. The user must continue clicking until they either click them all in sequence without repeats, or lose the game by clicking a card twice. If you click twice, then remember: You should have gone for the head.",
+      "completed_date": "21 June 1990",
+      "technologies": ["javascript", "boostrap", "nodejs", "heroku", "react"],
+      "github_link": "https://github.com/ZachSelindh/Clicky-React-Game",
+      "deployed_link": "https://avengers-clicky-app.herokuapp.com/"
+    },
+    {
+      "title": "On This Day",
+      "gif_location": "https://media3.giphy.com/media/p3vDjIpjbfghbF8ElO/giphy.gif",
+      "description": "One of my team-built projects for UT's WebDev Bootcamp. This application uses a datepicker to call various APIs and intergrate the response data into a format userful to the user. The background image uses NASA's API to find a picture of our solar system taken by satellites or telescopes at some point through the years on the current date. After the user picks a date, the app calls the Wikipedia and Youtube APIs to find relevant data to that date. For example, the Wikipeda AJAX call uses a scraper to find significant events that occured throughout history on that date.",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "html",
+        "css",
+        "javascript",
+        "bootstrap",
+        "jquery",
+        "api"
+      ],
+      "github_link": "https://zachselindh.github.io/On-This-Day-Project/",
+      "deployed_link": "https://zachselindh.github.io/On-This-Day-Project/"
+    },
+    {
+      "title": "Woofshare",
+      "gif_location": "https://media1.giphy.com/media/oHxw8TmNh83fcrX4s4/giphy.gif",
+      "description": "One of the major projects created with a small team for my WebDev Bootcamp at UT. WoofShare is a full-stack web app designed around one idea: What if you could rent a dog? This app utilizes Google Accounts for user validation. Users can view a library of available dogs, add them to a locally stored favorites list, reserve them, and leave reviews for other users. Hilarious concept aside, I'm very proud of this app!",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "javascript",
+        "bootstrap",
+        "jquery",
+        "handlebars",
+        "nodejs",
+        "mysql",
+        "sass",
+        "api"
+      ],
+      "github_link": "https://github.com/ZachSelindh/woofShare",
+      "deployed_link": "https://woofshare.herokuapp.com/"
+    },
+    {
+      "title": "Google Books MERN App",
+      "gif_location": "https://media0.giphy.com/media/4a3DNoV4ZWp734H3Ee/giphy.gif",
+      "description": "My first MERN-stack application! This app uses user input to search the Google Books API for matching titles. The results are then formatted in React components, and users can select favorites, which are saved to MongoDB via Mongoose. The Favorites pages displays the contents of the database, and users can remove items as they see fit.",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "javascript",
+        "bootstrap",
+        "react",
+        "nodejs",
+        "mongodb",
+        "api",
+        "heroku"
+      ],
+      "github_link": "https://github.com/ZachSelindh/React-Google-Books",
+      "deployed_link": "https://react-book-search-google.herokuapp.com/"
+    },
+    {
+      "title": "What Todo? Full Stack Todo App",
+      "gif_location": "https://media3.giphy.com/media/ggFKOF4K3fzeBLJl0q/giphy.gif",
+      "description": "A full-stack MERN application that features validation and authentication. Users can log their todos, view other users' todos, and update, mark complete, or delete only their own todos. I used a bare-bones approach to authentication, which used JWT and bcrypt.",
+      "completed_date": "21 June 1990",
+      "technologies": [
+        "javascript",
+        "bootstrap",
+        "react",
+        "nodejs",
+        "mongodb",
+        "jwt",
+        "bcrypt",
+        "heroku"
+      ],
+      "github_link": "https://github.com/ZachSelindh/react-todo-mern",
+      "deployed_link": "https://mern-stack-todo-app-zach.herokuapp.com/"
     }
   ]
 }
