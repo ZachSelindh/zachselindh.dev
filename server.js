@@ -2,57 +2,10 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const app = express();
-const Project = require("./models/Project");
 
 // Seeding utility
-const seedProject = projectData => {
-  const {
-    title,
-    gif_location,
-    description,
-    completed_date,
-    technologies,
-    github_link,
-    deployed_link
-  } = projectData;
-  Project.findOne({ title })
-    .then(foundProj => {
-      if (!foundProj) {
-        Project.create({
-          title,
-          gif_location,
-          description,
-          completed_date,
-          technologies,
-          github_link,
-          deployed_link
-        })
-          .then(newProj => res.send(newProj))
-          .catch(err => {
-            throw err;
-          });
-      } else if (foundProj) {
-        Project.updateOne(
-          { title },
-          {
-            title,
-            gif_location,
-            description,
-            completed_date,
-            technologies,
-            github_link,
-            deployed_link
-          },
-          (err, raw) => {
-            if (err) {
-              res.send(err);
-            }
-          }
-        );
-      }
-    })
-    .catch(err => res.send(err));
-};
+const seedProject = require("./config/dbSeed");
+const Project = require("./models/Project");
 
 const projectData = require("./dbData/index.json");
 const parsedData = JSON.parse(JSON.stringify(projectData));
@@ -76,7 +29,7 @@ const connection = require("./config/connection");
 
 connection
   .then(() => console.log("Database connected"))
-  .then(parsedData.projects.forEach(data => seedProject(data)))
+  .then(parsedData.projects.forEach(data => seedProject(data, Project)))
   .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 3001;

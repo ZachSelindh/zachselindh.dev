@@ -1,6 +1,4 @@
-const Project = require("../models/Project");
-
-module.exports = seedProject = projectData => {
+const seedProject = (projectData, Project) => {
   const {
     title,
     gif_location,
@@ -21,11 +19,9 @@ module.exports = seedProject = projectData => {
           technologies,
           github_link,
           deployed_link
-        })
-          .then(newProj => res.send(newProj))
-          .catch(err => {
-            throw err;
-          });
+        }).catch(err => {
+          throw err;
+        });
       } else if (foundProj) {
         Project.updateOne(
           { title },
@@ -40,11 +36,15 @@ module.exports = seedProject = projectData => {
           },
           (err, raw) => {
             if (err) {
-              res.send(err);
+              throw err;
             }
           }
         );
       }
     })
-    .catch(err => res.send(err));
+    .catch(err => {
+      throw err;
+    });
 };
+
+module.exports = seedProject;
