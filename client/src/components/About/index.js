@@ -19,9 +19,9 @@ function About() {
         I've found my passion in coding.
         <br />
         <br />
-        I'm currently attending a Boot Camp at the University of Texas at
-        Austin. Once I graduate, I'll be jumping headfirst into the world of web
-        and software development.
+        I've recently graduated from the full stack web development boot camp at
+        the University of Texas at Austin, and am currently seeking an
+        opportunity to put my new skills to the test.
         <br />
         <br />
         I live in Austin, Texas, with my beautiful wife Nicole and two sweet

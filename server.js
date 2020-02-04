@@ -19,13 +19,13 @@ const routes = require("./routes");
 app.use(routes);
 
 const connection = require("./config/connection.js");
-const seedProject = require("./config/dbSeed.js");
-const projectData = require("./dbData/index.json");
+/* const seedProject = require("./config/dbSeed.js");
+const projectData = require("./dbData/index.json"); */
 const parsedData = JSON.parse(JSON.stringify(projectData));
 
 connection
   .then(() => console.log("Database connected"))
-  .then(parsedData.projects.forEach(data => seedProject(data)))
+  /* .then(parsedData.projects.forEach(data => seedProject(data))) */
   .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 3001;
