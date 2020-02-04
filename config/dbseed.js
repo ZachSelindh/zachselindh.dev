@@ -1,6 +1,6 @@
 const Project = require("../models/Project");
 
-const seedProject = projectData => {
+module.exports = seedProject = projectData => {
   const {
     title,
     gif_location,
@@ -48,5 +48,3 @@ const seedProject = projectData => {
     })
     .catch(err => res.send(err));
 };
-
-module.exports = seedProject;
