@@ -4,28 +4,28 @@
       "title": "Wild West Hangman",
       "gif_location": "https://media.giphy.com/media/khkTyxl3MOGwczgoJt/giphy.gif",
       "description": "My first functional web application! This app uses vanilla Javascript and the Bootstrap HTML/CSS library for styling, albeit at the level of a true beginner! A basic hangman game, Wild West Hangman uses a native array of possible words to populate the scoreboard. Once a word is chosen, it is kicked out of the array, so it is possible to win the game is you successfully guess all the words! Extra credit if you don't use the console/developer tools to see the words!",
-      "completed_date": "21 June 1990",
+      "completed_date": "31 December 2018",
       "technologies": ["html", "css", "javascript", "bootstrap"],
       "github_link": "https://github.com/ZachSelindh/Hangman-Game",
       "deployed_link": "https://zachselindh.github.io/Hangman-Game/"
     },
     {
-      "title": "Crystal Witch Game",
-      "gif_location": "https://media.giphy.com/media/XIFgMl6nMtOiKe3F7J/giphy.gif",
-      "description": "One of my early apps. This game uses Jquery and timers to create a guessing/memory game in which the player must correctly learn the values of the displayed crystals and use on-the-fly arithmetic to get to the randomly generated target number. My app has a twist: In 'Hardcore Mode,' a ten-second timer is constantly counting down. When it reaches zero, the values of the crystals reset, but the current score and target stay the same!",
-      "completed_date": "21 June 1990",
-      "technologies": ["html", "css", "javascript", "bootstrap", "jquery"],
-      "github_link": "https://github.com/ZachSelindh/Crystal-Witch-Game",
-      "deployed_link": "https://zachselindh.github.io/Crystal-Witch-Game/"
-    },
-    {
       "title": "Pop Culture Trivia Game",
       "gif_location": "https://media.giphy.com/media/3s6KDjzmlTQH1iNpoQ/giphy.gif",
       "description": "This application uses JQuery and Javascript timers to create a timed quiz, pulling questions from all sorts of cultural phenomena, from Avengers to Zoolander. When the game begins, an RNG chooses one of the in-built questions from a native array, and starts a timer. Whether the user answers correctly or incorrectly, appropriate reaction GIFs and statements are randomly selected for the popup window. This app was styled using Bootstrap and a whole lot of nostalgia.",
-      "completed_date": "21 June 1990",
+      "completed_date": "24 January 2019",
       "technologies": ["html", "css", "javascript", "bootstrap", "jquery"],
       "github_link": "https://github.com/ZachSelindh/Pop-Culture-Trivia",
       "deployed_link": "https://zachselindh.github.io/Pop-Culture-Trivia/"
+    },
+    {
+      "title": "Crystal Witch Game",
+      "gif_location": "https://media.giphy.com/media/XIFgMl6nMtOiKe3F7J/giphy.gif",
+      "description": "One of my early apps. This game uses Jquery and timers to create a guessing/memory game in which the player must correctly learn the values of the displayed crystals and use on-the-fly arithmetic to get to the randomly generated target number. My app has a twist: In 'Hardcore Mode,' a ten-second timer is constantly counting down. When it reaches zero, the values of the crystals reset, but the current score and target stay the same!",
+      "completed_date": "29 January 2019",
+      "technologies": ["html", "css", "javascript", "bootstrap", "jquery"],
+      "github_link": "https://github.com/ZachSelindh/Crystal-Witch-Game",
+      "deployed_link": "https://zachselindh.github.io/Crystal-Witch-Game/"
     },
     {
       "title": "Giphy API: A Night At the Movies",
