@@ -10,6 +10,7 @@ router.get("/test", (req, res) => {
 // Get all projects in database
 router.get("/allprojects", (req, res) => {
   Project.find({})
+    .sort({ completed_date: -1 })
     .then(foundProjects => res.send(foundProjects))
     .catch(err => res.json(err));
 });
@@ -18,7 +19,7 @@ router.get("/allprojects", (req, res) => {
 // as part of the API route
 router.get("/tech/:technology", (req, res) => {
   Project.find({ technologies: req.params.technology })
-    .sort({ date_completed: -1 })
+    .sort({ completed_date: -1 })
     .then(foundProjects => res.send(foundProjects))
     .catch(err => res.send(err));
 });

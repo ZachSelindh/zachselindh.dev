@@ -24,7 +24,8 @@ function LeftItemPortfolio(props) {
       <div className="col-md-12 col-lg-6">
         <p className="portfolio-body">{props.description}</p>
       </div>
-      <div className="col-md-12 col-lg-6 link-row">
+      {/* Change this to col-md-12 col-lg-6 */}
+      <div className="col-12 link-row">
         <span className="tech-title"> Links: </span>
         <a
           className="deploy-link"
@@ -43,7 +44,7 @@ function LeftItemPortfolio(props) {
           <img alt="" className="tech-icon" src={WebImg} />
         </a>
       </div>
-      <div className="col-md-12 col-lg-6 link-row">
+      {/* <div className="col-md-12 col-lg-6 link-row">
         <span className="tech-title"> Technologies: </span>
         <a href={props.github_link} title="GitHub Repo" target="#">
           <img alt="" className="tech-icon tech-link" src={GitHubImg} />
@@ -51,7 +52,7 @@ function LeftItemPortfolio(props) {
         <a href={props.deployed_link} title="Deployed App" target="#">
           <img alt="" className="tech-icon tech-link" src={WebImg} />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
