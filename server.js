@@ -5,7 +5,7 @@ const app = express();
 const Project = require("./models/Project");
 
 // Seeding utility
-const seedProject = (projectData, Project) => {
+const seedProject = projectData => {
   const {
     title,
     gif_location,
