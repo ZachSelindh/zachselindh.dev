@@ -22,9 +22,7 @@ const seedProject = projectData => {
           github_link,
           deployed_link
         })
-          .then(newProject =>
-            console.log(`${newProject.title}` + " was created successully.")
-          )
+          .then(newProj => res.send(newProj))
           .catch(err => {
             throw err;
           });
@@ -44,12 +42,11 @@ const seedProject = projectData => {
             if (err) {
               res.send(err);
             }
-            console.log(`${title} was updated.`);
           }
         );
       }
     })
-    .catch(err => console.log(err));
+    .catch(err => res.send(err));
 };
 
 module.exports = seedProject;
