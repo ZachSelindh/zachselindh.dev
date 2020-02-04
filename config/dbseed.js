@@ -1,4 +1,4 @@
-const seedProject = (projectData, Project) => {
+const seedProject = projectData => {
   const {
     title,
     gif_location,
