@@ -1,9 +1,9 @@
 import React from "react";
 import GitHubImg from "../../../assets/icons/nav/github-logo.svg";
 import WebImg from "../../../assets/icons/web-icon.png";
+import JavascriptIcon from "../TechIcons/JavascriptIcon";
 
 function LeftItemPortfolio(props) {
-  console.log(props.technologies);
   return (
     <div id={props.index} className="row portfolio-item">
       <div className="row col-12">
@@ -48,7 +48,12 @@ function LeftItemPortfolio(props) {
         <span className="tech-title"> Technologies: </span>
         <span>
           {props.technologies.map((tech, index) => {
-            return <p key={index}>{tech}</p>;
+            switch (tech) {
+              case "javascript":
+                return <JavascriptIcon key={index} />;
+              default:
+                return null;
+            }
           })}
         </span>
       </div>
