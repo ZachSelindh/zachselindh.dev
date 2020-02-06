@@ -3,6 +3,7 @@ import GitHubImg from "../../../assets/icons/nav/github-logo.svg";
 import WebImg from "../../../assets/icons/web-icon.png";
 
 function LeftItemPortfolio(props) {
+  console.log(props.technologies);
   return (
     <div id={props.index} className="row portfolio-item">
       <div className="row col-12">
@@ -24,8 +25,7 @@ function LeftItemPortfolio(props) {
       <div className="col-md-12 col-lg-6">
         <p className="portfolio-body">{props.description}</p>
       </div>
-      {/* Change this to col-md-12 col-lg-6 */}
-      <div className="col-12 link-row">
+      <div className=" col-md-12 col-lg-6 link-row">
         <span className="tech-title"> Links: </span>
         <a
           className="deploy-link"
@@ -44,15 +44,14 @@ function LeftItemPortfolio(props) {
           <img alt="" className="tech-icon" src={WebImg} />
         </a>
       </div>
-      {/* <div className="col-md-12 col-lg-6 link-row">
+      <div className="col-md-12 col-lg-6 link-row">
         <span className="tech-title"> Technologies: </span>
-        <a href={props.github_link} title="GitHub Repo" target="#">
-          <img alt="" className="tech-icon tech-link" src={GitHubImg} />
-        </a>
-        <a href={props.deployed_link} title="Deployed App" target="#">
-          <img alt="" className="tech-icon tech-link" src={WebImg} />
-        </a>
-      </div> */}
+        <span>
+          {props.technologies.map((tech, index) => {
+            return <p key={index}>{tech}</p>;
+          })}
+        </span>
+      </div>
     </div>
   );
 }
