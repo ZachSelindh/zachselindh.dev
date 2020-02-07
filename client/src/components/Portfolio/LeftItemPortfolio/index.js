@@ -1,7 +1,7 @@
 import React from "react";
 import GitHubImg from "../../../assets/icons/nav/github-logo.svg";
 import WebImg from "../../../assets/icons/web-icon.png";
-import JavascriptIcon from "../TechIcons/JavascriptIcon";
+import TechIcon from "../TechIcon";
 
 function LeftItemPortfolio(props) {
   return (
@@ -50,7 +50,21 @@ function LeftItemPortfolio(props) {
           {props.technologies.map((tech, index) => {
             switch (tech) {
               case "javascript":
-                return <JavascriptIcon key={index} />;
+                return (
+                  <TechIcon
+                    key={index}
+                    name="Javascript"
+                    location="https://img.icons8.com/color/48/000000/javascript.png"
+                  />
+                );
+              case "api":
+                return (
+                  <TechIcon
+                    key={index}
+                    name="API"
+                    location="https://cdn0.iconfinder.com/data/icons/technology-business-and-industry/1000/file_light-59-512.png"
+                  />
+                );
               default:
                 return null;
             }
