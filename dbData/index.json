@@ -80,7 +80,7 @@
         "jquery",
         "boostrap",
         "nodejs",
-        "monodb",
+        "mongodb",
         "heroku"
       ],
       "github_link": "https://github.com/ZachSelindh/News-Scraper",
