@@ -77,6 +77,15 @@ img.portfolio-button {
   border-bottom: 2px solid black;
 }
 
+#search-tech-div {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+#search-tech-span {
+  font-size: 2em;
+}
+
 #portfolio-footer {
   font-size: 1.75em;
   text-align: center;
