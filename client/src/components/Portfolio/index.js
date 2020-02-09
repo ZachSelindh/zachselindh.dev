@@ -14,7 +14,16 @@ function Portfolio() {
       .catch(err => console.log(err));
   }, []);
 
-  /*  function getTechClick(event) {
+  /* function getAllTech(event) {
+    event.preventDefault();
+    setIsLoading(true);
+    API.getAllPortfolio()
+      .then(response => setPortfolioItems(response.data))
+      .then(setIsLoading(false))
+      .catch(err => console.log(err));
+  }
+
+  function getTechClick(event) {
     event.preventDefault();
     var searchTech = event.target.getAttribute("data").toString();
     setIsLoading(true);
@@ -38,6 +47,20 @@ function Portfolio() {
             data="react"
             className="tech-icon"
             onClick={getTechClick}
+          ></img>
+          <img
+            src="https://p.kindpng.com/picc/s/485-4850258_bootstrap-logo-png-image-free-download-searchpng-logos.png"
+            alt="Bootstrap"
+            data="bootstrap"
+            className="tech-icon"
+            onClick={getTechClick}
+          ></img>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTg4kgCX0r-13_Okwr9BRUZLURBlsxTJpg4yUjqW80r0ASArxzW"
+            alt="All"
+            data="bootstrap"
+            className="tech-icon"
+            onClick={getAllTech}
           ></img>
         </span>
       </div> */}
