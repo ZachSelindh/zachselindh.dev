@@ -71,6 +71,14 @@ img.portfolio-button {
   font-size: 1.2em;
 }
 
+.select-div {
+  padding: 0.5%;
+}
+
+.select-div :hover {
+  cursor: pointer;
+}
+
 #portfolio-brand-z {
   text-align: center;
   font-size: 2.75em;
@@ -85,6 +93,12 @@ img.portfolio-button {
 
 #search-tech-span {
   font-size: 2em;
+}
+
+#search-tech-span .select-tech :hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition-duration: 0.5s;
 }
 
 #portfolio-footer {
