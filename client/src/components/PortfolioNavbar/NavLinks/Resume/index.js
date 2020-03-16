@@ -6,7 +6,7 @@ function ResumeLink() {
     <a
       id="contact-icon-z"
       className="nav-icon-z nav-item nav-link"
-      href="https://drive.google.com/file/d/1sddq0YXslgMKOzY22F-KjTjbgP3UXobG/view?usp=sharing"
+      href="https://drive.google.com/open?id=1yjgDM4E_oaLmOZDtdoqBLl-W-PXDjY0c"
       target="#"
       title="Contact Page"
     >
