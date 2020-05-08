@@ -1,0 +1,11 @@
+#not-found {
+  margin: 1em auto 1em auto;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  overflow: hidden;
+  text-align: center;
+}
+
+#not-found p {
+  font-size: 1.2em;
+}
