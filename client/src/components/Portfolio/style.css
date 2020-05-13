@@ -79,6 +79,10 @@ img.portfolio-button {
   cursor: pointer;
 }
 
+.x-icon :hover {
+  cursor: pointer;
+}
+
 #portfolio-brand-z {
   text-align: center;
   font-size: 2.75em;

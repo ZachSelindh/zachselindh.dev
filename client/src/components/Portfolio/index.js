@@ -17,8 +17,7 @@ function Portfolio() {
       .catch((err) => console.log(err));
   }, []);
 
-  function getAllTech(event) {
-    event.preventDefault();
+  function getAllTech() {
     setIsLoading(true);
     API.getAllPortfolio()
       .then(
@@ -119,6 +118,14 @@ function Portfolio() {
             </div>
             {showFilter ? (
               <p>
+                <i className="x-icon" onClick={getAllTech}>
+                  <img
+                    width="15px"
+                    height="15px"
+                    alt="Remove Search"
+                    src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/133250/milker_X_icon.png"
+                  />
+                </i>{" "}
                 Currently showing:{" "}
                 <img
                   className="tech-icon select-tech"
