@@ -10,10 +10,10 @@ function Portfolio() {
   const [showingState, setShowingState] = useState(null);
   const [techName, setTechName] = useState(null);
   const [showFilter, setShowFilter] = useState(false);
+
   useEffect(() => {
     API.getAllPortfolio()
-      .then((response) => setPortfolioItems(response.data))
-      .then(setIsLoading(false))
+      .then((response) => setPortfolioItems(response.data), setIsLoading(false))
       .catch((err) => console.log(err));
   }, []);
 
@@ -22,29 +22,29 @@ function Portfolio() {
     API.getAllPortfolio()
       .then(
         (response) => setPortfolioItems(response.data),
-        setIsLoading(false),
-        setShowFilter(false)
+        setShowingState(null),
+        setTechName(null),
+        setShowFilter(false),
+        setIsLoading(false)
       )
       .catch((err) => console.log(err));
-    setShowingState(null);
-    setTechName(null);
   }
 
   function getTechClick(event) {
+    setIsLoading(true);
     event.preventDefault();
     var searchTech = event.target.getAttribute("data").toString();
     var techSource = event.target.getAttribute("src").toString();
     var techName = event.target.getAttribute("alt").toString();
-    setIsLoading(true);
     API.getByTech(searchTech)
       .then(
         (responseTech) => setPortfolioItems(responseTech.data),
-        setIsLoading(false),
-        setShowFilter(true)
+        setShowingState(techSource),
+        setTechName(techName),
+        setShowFilter(true),
+        setIsLoading(false)
       )
       .catch((err) => console.log(err));
-    setShowingState(techSource);
-    setTechName(techName);
   }
 
   return (
@@ -63,61 +63,61 @@ function Portfolio() {
                 src="https://www.tuannguyen.tech/wp-content/uploads/2019/01/react.png"
                 alt="React"
                 data="react"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
                 alt="React / Redux"
                 data="redux"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://image.flaticon.com/icons/png/512/919/919825.png"
                 alt="Node.js"
                 data="nodejs"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://cdn.worldvectorlogo.com/logos/mysql.svg"
                 alt="mySQL"
                 data="mysql"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://www.pngitem.com/pimgs/m/385-3850320_png-transparent-mongodb-icon-mongodb-logo-png-download.png"
                 alt="MongoDB"
                 data="mongodb"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://i.pinimg.com/originals/34/20/e5/3420e571b3d7a4a348d8fad91e3bfda4.png"
                 alt="jQuery"
                 data="jquery"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://pluspng.com/img-png/bootstrap-png-bootstrap-512.png"
                 alt="Bootstrap"
                 data="bootstrap"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
               <img
                 src="https://keytotech.com/wp-content/uploads/2019/05/firebase.png"
                 alt="Google Firebase"
                 data="firebase"
-                className="tech-icon select-tech"
+                className="tech-icon-search select-tech"
                 onClick={getTechClick}
               />
             </div>
             {showFilter ? (
-              <p>
+              <p className="currently-showing">
                 <i className="x-icon" onClick={getAllTech}>
                   <img
                     className="x-img"
@@ -127,7 +127,7 @@ function Portfolio() {
                 </i>{" "}
                 Currently showing:{" "}
                 <img
-                  className="tech-icon select-tech"
+                  className="tech-icon-search select-tech"
                   alt={techName}
                   src={showingState}
                 />

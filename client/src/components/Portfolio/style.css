@@ -50,8 +50,17 @@ img.portfolio-button {
 }
 
 .tech-icon {
-  height: 60px;
-  width: 60px;
+  height: 4em;
+  width: 4em;
+}
+
+.tech-icon-search {
+  height: 2em;
+  width: 2em;
+}
+
+.currently-showing {
+  margin-bottom: -0.25em;
 }
 
 .link-row {
