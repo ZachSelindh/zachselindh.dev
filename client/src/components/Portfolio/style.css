@@ -79,6 +79,11 @@ img.portfolio-button {
   cursor: pointer;
 }
 
+.x-img {
+  width: 0.5em;
+  height: 0.5em;
+}
+
 .x-icon :hover {
   cursor: pointer;
 }

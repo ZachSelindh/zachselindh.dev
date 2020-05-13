@@ -120,8 +120,7 @@ function Portfolio() {
               <p>
                 <i className="x-icon" onClick={getAllTech}>
                   <img
-                    width="15px"
-                    height="15px"
+                    className="x-img"
                     alt="Remove Search"
                     src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/133250/milker_X_icon.png"
                   />
