@@ -85,12 +85,12 @@ function RightPortfolioItem(props) {
               case "bootstrap":
                 techprops.name = "Bootstrap";
                 techprops.location =
-                  "https://p.kindpng.com/picc/s/485-4850258_bootstrap-logo-png-image-free-download-searchpng-logos.png";
+                  "https://pluspng.com/img-png/bootstrap-png-bootstrap-512.png";
                 break;
               case "jquery":
                 techprops.name = "jQuery";
                 techprops.location =
-                  "https://seeklogo.net/wp-content/uploads/2014/10/jquery-logo-vector-download.jpg";
+                  "https://i.pinimg.com/originals/34/20/e5/3420e571b3d7a4a348d8fad91e3bfda4.png";
                 break;
               case "api":
                 techprops.name = "API";
@@ -100,12 +100,12 @@ function RightPortfolioItem(props) {
               case "nodejs":
                 techprops.name = "Node.js";
                 techprops.location =
-                  "https://ih1.redbubble.net/image.109336634.1604/flat,550x550,075,f.u1.jpg";
+                  "https://image.flaticon.com/icons/png/512/919/919825.png";
                 break;
               case "mysql":
                 techprops.name = "mySQL";
                 techprops.location =
-                  "https://seeklogo.net/wp-content/uploads/2012/03/mysql-vector1.jpg";
+                  "https://cdn.worldvectorlogo.com/logos/mysql.svg";
                 break;
               case "heroku":
                 techprops.name = "Heroku";
@@ -115,7 +115,7 @@ function RightPortfolioItem(props) {
               case "mongodb":
                 techprops.name = "MongoDB";
                 techprops.location =
-                  "https://banner2.cleanpng.com/20190111/thz/kisspng-mongodb-logo-database-nosql-postgresql-how-to-create-an-outstanding-tech-stack-clickup-bl-5c391bdf9cff48.4731136215472465596431.jpg";
+                  "https://www.pngitem.com/pimgs/m/385-3850320_png-transparent-mongodb-icon-mongodb-logo-png-download.png";
                 break;
               case "handlebars":
                 techprops.name = "Express Handlebars";
@@ -150,7 +150,7 @@ function RightPortfolioItem(props) {
               case "firebase":
                 techprops.name = "Google Firebase";
                 techprops.location =
-                  "https://cdn.dribbble.com/users/528264/screenshots/3140440/firebase_logo.png";
+                  "https://keytotech.com/wp-content/uploads/2019/05/firebase.png";
                 break;
               default:
                 break;
