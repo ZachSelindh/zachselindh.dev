@@ -163,6 +163,15 @@
       ],
       "github_link": "https://github.com/ZachSelindh/react-todo-mern",
       "deployed_link": "https://mern-stack-todo-app-zach.herokuapp.com/"
+    },
+    {
+      "title": "React/Redux Client Dashboard",
+      "gif_location": "https://media.giphy.com/media/XfQ0fzDKV6m3vTEG5B/giphy.gif",
+      "description": "Built using React/Redux and Firebase, this application allows users to maintain a client dashboard with owed balance and client details, and uses react-redux-firebase to maintain settings in state that relate to user creation and authorization options. This app was built following a Brad Traversy tutorial on udemy.",
+      "completed_date": "2020-05-13",
+      "technologies": ["javascript", "bootstrap", "react", "redux", "firebase"],
+      "github_link": "https://github.com/ZachSelindh/react-client-panel",
+      "deployed_link": "https://reactclientpanel-ad545.web.app/"
     }
   ]
 }

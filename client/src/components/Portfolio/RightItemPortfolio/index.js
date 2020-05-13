@@ -64,7 +64,7 @@ function RightPortfolioItem(props) {
           {props.technologies.map((tech, index) => {
             var techprops = {
               name: "",
-              location: ""
+              location: "",
             };
             switch (tech) {
               case "html":
@@ -141,6 +141,16 @@ function RightPortfolioItem(props) {
                 techprops.name = "BCrypt Encryption";
                 techprops.location =
                   "https://cybersensor.files.wordpress.com/2018/08/bcrypt-logo.jpg?w=605";
+                break;
+              case "redux":
+                techprops.name = "React / Redux";
+                techprops.location =
+                  "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png";
+                break;
+              case "firebase":
+                techprops.name = "Google Firebase";
+                techprops.location =
+                  "https://cdn.dribbble.com/users/528264/screenshots/3140440/firebase_logo.png";
                 break;
               default:
                 break;
