@@ -78,7 +78,7 @@
       "technologies": [
         "javascript",
         "jquery",
-        "boostrap",
+        "bootstrap",
         "nodejs",
         "mongodb",
         "heroku"
@@ -91,7 +91,7 @@
       "gif_location": "https://media2.giphy.com/media/iNZaWRBTtAWkcANc72/giphy.gif",
       "description": "My first React.js application! This app uses React to render a web page with cards featuring the visages of famous superheroes. Every time the user clicks an Avenger, the cards are shuffled. The user must continue clicking until they either click them all in sequence without repeats, or lose the game by clicking a card twice. If you click twice, then remember: You should have gone for the head.",
       "completed_date": "2019-05-7",
-      "technologies": ["javascript", "boostrap", "nodejs", "heroku", "react"],
+      "technologies": ["javascript", "bootstrap", "nodejs", "heroku", "react"],
       "github_link": "https://github.com/ZachSelindh/Clicky-React-Game",
       "deployed_link": "https://avengers-clicky-app.herokuapp.com/"
     },

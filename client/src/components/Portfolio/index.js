@@ -50,92 +50,86 @@ function Portfolio() {
   return (
     <div className="col-12 portfolio-z bg-light">
       <h1 id="portfolio-brand-z">Portfolio</h1>
-      {/* Testing tech search feature */}
-      {
-        <div id="search-tech-div" className="col-12">
-          <div id="search-tech-span">
-            <div className="col-12">
-              {" "}
-              Select a Technology To Refine Results:{" "}
-            </div>
-            <div className="col-12 select-div">
-              <img
-                src="https://www.tuannguyen.tech/wp-content/uploads/2019/01/react.png"
-                alt="React"
-                data="react"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
-                alt="React / Redux"
-                data="redux"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://image.flaticon.com/icons/png/512/919/919825.png"
-                alt="Node.js"
-                data="nodejs"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://cdn.worldvectorlogo.com/logos/mysql.svg"
-                alt="mySQL"
-                data="mysql"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://www.pngitem.com/pimgs/m/385-3850320_png-transparent-mongodb-icon-mongodb-logo-png-download.png"
-                alt="MongoDB"
-                data="mongodb"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://i.pinimg.com/originals/34/20/e5/3420e571b3d7a4a348d8fad91e3bfda4.png"
-                alt="jQuery"
-                data="jquery"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://pluspng.com/img-png/bootstrap-png-bootstrap-512.png"
-                alt="Bootstrap"
-                data="bootstrap"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-              <img
-                src="https://keytotech.com/wp-content/uploads/2019/05/firebase.png"
-                alt="Google Firebase"
-                data="firebase"
-                className="tech-icon-search select-tech"
-                onClick={getTechClick}
-              />
-            </div>
-            {showFilter ? (
-              <p className="currently-showing">
-                <i className="x-icon" onClick={getAllTech}>
-                  <img
-                    className="x-img"
-                    alt="Remove Search"
-                    src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/133250/milker_X_icon.png"
-                  />
-                </i>{" "}
-                Currently showing:{" "}
-                <img
-                  className="tech-icon-search select-tech"
-                  alt={techName}
-                  src={showingState}
-                />
-              </p>
-            ) : null}
+      <div id="search-tech-div" className="col-12">
+        <div id="search-tech-span">
+          <div className="col-12"> Select a Technology To Refine Results: </div>
+          <div className="col-12 select-div">
+            <img
+              src="https://www.tuannguyen.tech/wp-content/uploads/2019/01/react.png"
+              alt="React"
+              data="react"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
+              alt="React / Redux"
+              data="redux"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://image.flaticon.com/icons/png/512/919/919825.png"
+              alt="Node.js"
+              data="nodejs"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/mysql.svg"
+              alt="mySQL"
+              data="mysql"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://www.pngitem.com/pimgs/m/385-3850320_png-transparent-mongodb-icon-mongodb-logo-png-download.png"
+              alt="MongoDB"
+              data="mongodb"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://i.pinimg.com/originals/34/20/e5/3420e571b3d7a4a348d8fad91e3bfda4.png"
+              alt="jQuery"
+              data="jquery"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://pluspng.com/img-png/bootstrap-png-bootstrap-512.png"
+              alt="Bootstrap"
+              data="bootstrap"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
+            <img
+              src="https://keytotech.com/wp-content/uploads/2019/05/firebase.png"
+              alt="Google Firebase"
+              data="firebase"
+              className="tech-icon-search select-tech"
+              onClick={getTechClick}
+            />
           </div>
+          {showFilter ? (
+            <p className="currently-showing">
+              <i className="x-icon" onClick={getAllTech}>
+                <img
+                  className="x-img"
+                  alt="Remove Search"
+                  src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/133250/milker_X_icon.png"
+                />
+              </i>{" "}
+              Currently showing:{" "}
+              <img
+                className="tech-icon-search select-tech"
+                alt={techName}
+                src={showingState}
+              />
+            </p>
+          ) : null}
         </div>
-      }
+      </div>
       {portfolioItems.length ? (
         isLoading ? (
           <div>Loading Portfolio Items...</div>
