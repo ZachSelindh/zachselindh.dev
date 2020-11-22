@@ -3,12 +3,8 @@ const router = require("express").Router();
 
 require("dotenv").config();
 
-const apiRoutes = require("./api/index");
-
-router.use("/api/", apiRoutes);
-
 // Send React start point if no routes are called.
-router.use(function(req, res) {
+router.use(function (req, res) {
   if (process.env.ENVIRONMENT === "development") {
     // Dev route
     res.sendFile(path.join(__dirname, "../client/public/index.html"));
