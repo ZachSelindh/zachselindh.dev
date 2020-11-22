@@ -2,60 +2,6 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const app = express();
-const Project = require("./models/Project");
-
-// Seeding utility
-const seedProject = projectData => {
-  const {
-    title,
-    gif_location,
-    description,
-    completed_date,
-    technologies,
-    github_link,
-    deployed_link
-  } = projectData;
-  Project.findOne({ title })
-    .then(foundProj => {
-      if (!foundProj) {
-        Project.create({
-          title,
-          gif_location,
-          description,
-          completed_date,
-          technologies,
-          github_link,
-          deployed_link
-        }).catch(err => {
-          throw err;
-        });
-      } else if (foundProj) {
-        Project.updateOne(
-          { title },
-          {
-            title,
-            gif_location,
-            description,
-            completed_date,
-            technologies,
-            github_link,
-            deployed_link
-          },
-          (err, raw) => {
-            if (err) {
-              throw err;
-            }
-          }
-        );
-      }
-    })
-    .catch(err => {
-      throw err;
-    });
-};
-
-const projectData = require("./dbData/index.json");
-const parsedData = JSON.parse(JSON.stringify(projectData));
 
 // Express Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -71,13 +17,6 @@ if (process.env.ENVIRONMENT === "development") {
 
 const routes = require("./routes");
 app.use(routes);
-
-const connection = require("./config/connection");
-
-connection
-  .then(() => console.log("Database connected"))
-  .then(parsedData.projects.forEach(data => seedProject(data)))
-  .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 3001;
 

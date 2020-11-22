@@ -1,161 +1,228 @@
-import React, { useState, useEffect } from "react";
-import API from "../../utils/API";
+import React, { useState } from "react";
 import RightItemPortfolio from "./RightItemPortfolio";
 import LeftItemPortfolio from "./LeftItemPortfolio";
 import "./style.css";
 
 function Portfolio() {
-  const [portfolioItems, setPortfolioItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [showingState, setShowingState] = useState(null);
-  const [techName, setTechName] = useState(null);
-  const [showFilter, setShowFilter] = useState(false);
-
-  useEffect(() => {
-    API.getAllPortfolio()
-      .then((response) => setPortfolioItems(response.data), setIsLoading(false))
-      .catch((err) => console.log(err));
-  }, []);
-
-  function getAllTech() {
-    setIsLoading(true);
-    API.getAllPortfolio()
-      .then(
-        (response) => setPortfolioItems(response.data),
-        setShowingState(null),
-        setTechName(null),
-        setShowFilter(false),
-        setIsLoading(false)
-      )
-      .catch((err) => console.log(err));
-  }
-
-  function getTechClick(event) {
-    setIsLoading(true);
-    event.preventDefault();
-    var searchTech = event.target.getAttribute("data").toString();
-    var techSource = event.target.getAttribute("src").toString();
-    var techName = event.target.getAttribute("alt").toString();
-    API.getByTech(searchTech)
-      .then(
-        (responseTech) => setPortfolioItems(responseTech.data),
-        setShowingState(techSource),
-        setTechName(techName),
-        setShowFilter(true),
-        setIsLoading(false)
-      )
-      .catch((err) => console.log(err));
-  }
+  const [portfolioItems] = useState([
+    {
+      title: "React/Redux Client Dashboard",
+      gif_location:
+        "https://media.giphy.com/media/XfQ0fzDKV6m3vTEG5B/giphy.gif",
+      description:
+        "Built using React/Redux and Firebase, this application allows users to maintain a client dashboard with owed balance and client details, and uses react-redux-firebase to maintain settings in state that relate to user creation and authorization options. This app was built following a Brad Traversy tutorial on udemy.",
+      completed_date: "2020-05-13",
+      technologies: ["javascript", "bootstrap", "react", "redux", "firebase"],
+      github_link: "https://github.com/ZachSelindh/react-client-panel",
+      deployed_link: "https://reactclientpanel-ad545.web.app/",
+    },
+    {
+      title: "What Todo? Full Stack Todo App",
+      gif_location:
+        "https://media3.giphy.com/media/ggFKOF4K3fzeBLJl0q/giphy.gif",
+      description:
+        "A full-stack MERN application that features validation and authentication. Users can log their todos, view other users' todos, and update, mark complete, or delete only their own todos. I used a bare-bones approach to authentication, which used JWT and bcrypt.",
+      completed_date: "2019-06-18",
+      technologies: [
+        "javascript",
+        "bootstrap",
+        "react",
+        "nodejs",
+        "mongodb",
+        "jwt",
+        "bcrypt",
+        "heroku",
+      ],
+      github_link: "https://github.com/ZachSelindh/react-todo-mern",
+      deployed_link: "https://mern-stack-todo-app-zach.herokuapp.com/",
+    },
+    {
+      title: "Google Books MERN App",
+      gif_location:
+        "https://media0.giphy.com/media/4a3DNoV4ZWp734H3Ee/giphy.gif",
+      description:
+        "My first MERN-stack application! This app uses user input to search the Google Books API for matching titles. The results are then formatted in React components, and users can select favorites, which are saved to MongoDB via Mongoose. The Favorites pages displays the contents of the database, and users can remove items as they see fit.",
+      completed_date: "2019-05-31",
+      technologies: [
+        "javascript",
+        "bootstrap",
+        "react",
+        "nodejs",
+        "mongodb",
+        "api",
+        "heroku",
+      ],
+      github_link: "https://github.com/ZachSelindh/React-Google-Books",
+      deployed_link: "https://react-book-search-google.herokuapp.com/",
+    },
+    {
+      title: "Woofshare",
+      gif_location:
+        "https://media1.giphy.com/media/oHxw8TmNh83fcrX4s4/giphy.gif",
+      description:
+        "One of the major projects created with a small team for my WebDev Bootcamp at UT. WoofShare is a full-stack web app designed around one idea: What if you could rent a dog? This app utilizes Google Accounts for user validation. Users can view a library of available dogs, add them to a locally stored favorites list, reserve them, and leave reviews for other users. Hilarious concept aside, I'm very proud of this app!",
+      completed_date: "2019-04-16",
+      technologies: [
+        "javascript",
+        "bootstrap",
+        "jquery",
+        "handlebars",
+        "nodejs",
+        "mysql",
+        "sass",
+        "api",
+      ],
+      github_link: "https://github.com/ZachSelindh/woofShare",
+      deployed_link: "https://woofshare.herokuapp.com/",
+    },
+    {
+      title: "On This Day",
+      gif_location:
+        "https://media3.giphy.com/media/p3vDjIpjbfghbF8ElO/giphy.gif",
+      description:
+        "One of my team-built projects for UT's WebDev Bootcamp. This application uses a datepicker to call various APIs and intergrate the response data into a format userful to the user. The background image uses NASA's API to find a picture of our solar system taken by satellites or telescopes at some point through the years on the current date. After the user picks a date, the app calls the Wikipedia and Youtube APIs to find relevant data to that date. For example, the Wikipeda AJAX call uses a scraper to find significant events that occured throughout history on that date.",
+      completed_date: "2019-02-14",
+      technologies: ["html", "css", "javascript", "bootstrap", "jquery", "api"],
+      github_link: "https://github.com/ZachSelindh/On-This-Day-Project",
+      deployed_link: "https://zachselindh.github.io/On-This-Day-Project/",
+    },
+    {
+      title: "React Avengers Clicky Game",
+      gif_location:
+        "https://media2.giphy.com/media/iNZaWRBTtAWkcANc72/giphy.gif",
+      description:
+        "My first React.js application! This app uses React to render a web page with cards featuring the visages of famous superheroes. Every time the user clicks an Avenger, the cards are shuffled. The user must continue clicking until they either click them all in sequence without repeats, or lose the game by clicking a card twice. If you click twice, then remember: You should have gone for the head.",
+      completed_date: "2019-05-7",
+      technologies: ["javascript", "bootstrap", "nodejs", "heroku", "react"],
+      github_link: "https://github.com/ZachSelindh/Clicky-React-Game",
+      deployed_link: "https://avengers-clicky-app.herokuapp.com/",
+    },
+    {
+      title: "News Scraper",
+      gif_location:
+        "https://media1.giphy.com/media/258quBLClB7ostg0GY/giphy.gif",
+      description:
+        "This web app uses the Cheerio web scraper to make calls to various news websites and returns data this styled and rendered in a format that allows users to view the article headline, the subtext, and view links to the original articles. The article information is stored using Mongoose and rendered using the Express-Handlebars templating engine. The app also uses local storage to create a favorites list.",
+      completed_date: "2019-06-17",
+      technologies: [
+        "javascript",
+        "jquery",
+        "bootstrap",
+        "nodejs",
+        "mongodb",
+        "heroku",
+      ],
+      github_link: "https://github.com/ZachSelindh/News-Scraper",
+      deployed_link: "https://news-scraperer.herokuapp.com/",
+    },
+    {
+      title: "Burgers I'd Like To Eat",
+      gif_location:
+        "https://media0.giphy.com/media/9qZDUmhxET0MGRVjkm/giphy.gif",
+      description:
+        "Who doesn't like a good cheeseburger? This app uses a MySQL database to store what burgers I'd like to eat, and allows me to change info on the database when I've eaten the burger. Please don't add any expletive-laced burger names. I definitely won't find it hilarious and laugh out loud when I see it. Promise.",
+      completed_date: "2019-04-13",
+      technologies: [
+        "javascript",
+        "jquery",
+        "bootstrap",
+        "nodejs",
+        "mysql",
+        "heroku",
+      ],
+      github_link: "https://github.com/ZachSelindh/Burgers-Id-Like-To-Eat",
+      deployed_link: "https://burgers-id-like-to-eat.herokuapp.com/",
+    },
+    {
+      title: "D&D & Dates",
+      gif_location:
+        "https://media0.giphy.com/media/3HBCWrt9G5AlFZnuR4/giphy.gif",
+      description:
+        "Everyone has that one fantasy about that cute elven rogue, right? No? Just me? This app uses Express and Node.js to set up a survey that matches the user to whichever character in the native API has the closest survey score.",
+      completed_date: "2019-03-26",
+      technologies: ["javascript", "jquery", "bootstrap", "nodejs", "heroku"],
+      github_link: "https://github.com/ZachSelindh/DungeonsAndDragonsAndDates",
+      deployed_link: "https://dungeons-and-dragons-and-dates.herokuapp.com/",
+    },
+    {
+      title: "Node Retail Command Line App",
+      gif_location:
+        "https://media.giphy.com/media/dBadldsatjh2W3nmLN/giphy.gif",
+      description:
+        "This is a CLI application that uses Node.js to query MySQL to administer stock, price, and availability information for a fake electronics store. On the manager side of the application, additional stock and new items can be added using the same command line interface. As a CLI, it's not deployed, so my deployment links refer to a youtube video showing the functionality.",
+      completed_date: "2019-03-16",
+      technologies: ["javascript", "nodejs", "mysql"],
+      github_link: "https://github.com/ZachSelindh/BAmazon",
+      deployed_link: "https://www.youtube.com/watch?v=-A4jBu9tmHI",
+    },
+    {
+      title: "Giphy API: A Night At the Movies",
+      gif_location:
+        "https://media.giphy.com/media/B1E2oPGVhWbx6MPkNh/giphy.gif",
+      description:
+        "One of my first applications using APIs. This app features a row of buttons which query the Giphy API with their keyword to return 10 GIFs that match the search criteria. Actually, they're just still images; mousing over the thumbnails will turn them into animated GIFs. Users can also add their own search buttons, as well as clear the GIFs that have been previously populated.",
+      completed_date: "2019-01-31",
+      technologies: ["html", "css", "javascript", "bootstrap", "api"],
+      github_link: "https://github.com/ZachSelindh/GIPHY-API-project",
+      deployed_link: "https://zachselindh.github.io/GIPHY-API-project/",
+    },
+    {
+      title: "Crystal Witch Game",
+      gif_location:
+        "https://media.giphy.com/media/XIFgMl6nMtOiKe3F7J/giphy.gif",
+      description:
+        "One of my early apps. This game uses Jquery and timers to create a guessing/memory game in which the player must correctly learn the values of the displayed crystals and use on-the-fly arithmetic to get to the randomly generated target number. My app has a twist: In 'Hardcore Mode,' a ten-second timer is constantly counting down. When it reaches zero, the values of the crystals reset, but the current score and target stay the same!",
+      completed_date: "2019-01-29",
+      technologies: ["html", "css", "javascript", "bootstrap", "jquery"],
+      github_link: "https://github.com/ZachSelindh/Crystal-Witch-Game",
+      deployed_link: "https://zachselindh.github.io/Crystal-Witch-Game/",
+    },
+    {
+      title: "Pop Culture Trivia Game",
+      gif_location:
+        "https://media.giphy.com/media/3s6KDjzmlTQH1iNpoQ/giphy.gif",
+      description:
+        "This application uses JQuery and Javascript timers to create a timed quiz, pulling questions from all sorts of cultural phenomena, from Avengers to Zoolander. When the game begins, an RNG chooses one of the in-built questions from a native array, and starts a timer. Whether the user answers correctly or incorrectly, appropriate reaction GIFs and statements are randomly selected for the popup window. This app was styled using Bootstrap and a whole lot of nostalgia.",
+      completed_date: "2019-01-24",
+      technologies: ["html", "css", "javascript", "bootstrap", "jquery"],
+      github_link: "https://github.com/ZachSelindh/Pop-Culture-Trivia",
+      deployed_link: "https://zachselindh.github.io/Pop-Culture-Trivia/",
+    },
+    {
+      title: "Wild West Hangman",
+      gif_location:
+        "https://media.giphy.com/media/khkTyxl3MOGwczgoJt/giphy.gif",
+      description:
+        "My first functional web application! This app uses vanilla Javascript and the Bootstrap HTML/CSS library for styling, albeit at the level of a true beginner! A basic hangman game, Wild West Hangman uses a native array of possible words to populate the scoreboard. Once a word is chosen, it is kicked out of the array, so it is possible to win the game is you successfully guess all the words! Extra credit if you don't use the console/developer tools to see the words!",
+      completed_date: "2018-12-31",
+      technologies: ["html", "css", "javascript", "bootstrap"],
+      github_link: "https://github.com/ZachSelindh/Hangman-Game",
+      deployed_link: "https://zachselindh.github.io/Hangman-Game/",
+    },
+  ]);
 
   return (
     <div className="col-12 portfolio-z bg-light">
       <h1 id="portfolio-brand-z">Portfolio</h1>
-      <div id="search-tech-div" className="col-12">
-        <div id="search-tech-span">
-          <div className="col-12"> Select a Technology To Refine Results: </div>
-          <div className="col-12 select-div">
-            <img
-              src="https://www.tuannguyen.tech/wp-content/uploads/2019/01/react.png"
-              alt="React"
-              data="react"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
-              alt="React / Redux"
-              data="redux"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://image.flaticon.com/icons/png/512/919/919825.png"
-              alt="Node.js"
-              data="nodejs"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/mysql.svg"
-              alt="mySQL"
-              data="mysql"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://www.pngitem.com/pimgs/m/385-3850320_png-transparent-mongodb-icon-mongodb-logo-png-download.png"
-              alt="MongoDB"
-              data="mongodb"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://i.pinimg.com/originals/34/20/e5/3420e571b3d7a4a348d8fad91e3bfda4.png"
-              alt="jQuery"
-              data="jquery"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://pluspng.com/img-png/bootstrap-png-bootstrap-512.png"
-              alt="Bootstrap"
-              data="bootstrap"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-            <img
-              src="https://keytotech.com/wp-content/uploads/2019/05/firebase.png"
-              alt="Google Firebase"
-              data="firebase"
-              className="tech-icon-search select-tech"
-              onClick={getTechClick}
-            />
-          </div>
-          {showFilter ? (
-            <p className="currently-showing">
-              <i className="x-icon" onClick={getAllTech}>
-                <img
-                  className="x-img"
-                  alt="Remove Search"
-                  src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/133250/milker_X_icon.png"
-                />
-              </i>{" "}
-              Currently showing:{" "}
-              <img
-                className="tech-icon-search select-tech"
-                alt={techName}
-                src={showingState}
-              />
-            </p>
-          ) : null}
-        </div>
-      </div>
-      {portfolioItems.length ? (
-        isLoading ? (
-          <div>Loading Portfolio Items...</div>
+      <div id="search-tech-div" className="col-12"></div>
+      {portfolioItems.map((item, index) => {
+        const customProps = {
+          key: index,
+          index: index,
+          title: item.title,
+          gif_location: item.gif_location,
+          description: item.description,
+          completed_date: item.completed_date,
+          technologies: item.technologies,
+          github_link: item.github_link,
+          deployed_link: item.deployed_link,
+        };
+        return index % 2 === 0 ? (
+          <LeftItemPortfolio {...customProps} />
         ) : (
-          portfolioItems.map((item, index) => {
-            const customProps = {
-              key: item._id,
-              index: index,
-              title: item.title,
-              gif_location: item.gif_location,
-              description: item.description,
-              completed_date: item.completed_date,
-              technologies: item.technologies,
-              github_link: item.github_link,
-              deployed_link: item.deployed_link,
-            };
-            return index % 2 === 0 ? (
-              <LeftItemPortfolio {...customProps} />
-            ) : (
-              <RightItemPortfolio {...customProps} />
-            );
-          })
-        )
-      ) : (
-        <div>No items found!</div>
-      )}
+          <RightItemPortfolio {...customProps} />
+        );
+      })}
 
       <p id="portfolio-footer">Check back later for more apps!</p>
     </div>
