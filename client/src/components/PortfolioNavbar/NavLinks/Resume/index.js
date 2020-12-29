@@ -1,16 +1,16 @@
 import React from "react";
-import ContactImg from "../../../../assets/icons/nav/mail.png";
+import ResumeImg from "../../../../assets/icons/nav/mail.png";
 
 function ResumeLink() {
   return (
     <a
       id="contact-icon-z"
       className="nav-icon-z nav-item nav-link"
-      href="https://drive.google.com/open?id=1yjgDM4E_oaLmOZDtdoqBLl-W-PXDjY0c"
+      href="https://zachselindh.github.io/resume/"
       target="#"
-      title="Contact Page"
+      title="Resume"
     >
-      <img alt="" src={ContactImg} height="60px" width="60px" />
+      <img alt="" src={ResumeImg} height="60px" width="60px" />
       <p>Resume</p>
     </a>
   );
